@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leoceokj 웹페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌐 나의 전문적인 웹페이지</h1>
+            <p>HTML과 CSS의 심화 내용을 실습합니다.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="https://www.naver.com/">Naver</a></li>
+                <li><a href="https://www.google.com/">Google</a></li>
+                <li><a href="https://openai.com/chatgpt/" target="_blank">ChatGPT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <h2>섹션 1</h2>
+                    <p>이곳에 컨텐츠를 추가하세요. 웹 디자인의 기본 원칙과 최신 트렌드를 고려하여 작성된 전문적인 내용을 담을 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h2>섹션 2</h2>
+                    <p>다양한 멀티미디어 요소를 활용하여 사용자의 관심을 끌 수 있는 내용을 구성해보세요. 인포그래픽, 차트, 동영상 등을 고려해볼 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h2>섹션 3</h2>
+                    <p>사용자 경험을 고려한 인터랙티브한 요소를 추가해보세요. 애니메이션, 호버 효과, 클릭 이벤트 등을 통해 더욱 풍부한 웹페이지를 만들 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight">
+            <p>중요한 정보나 call-to-action을 위한 강조 섹션입니다. 사용자의 주의를 끌고 싶은 내용을 이곳에 배치하세요.</p>
+        </div>
+
+        <img src="img01.jpg" alt="샘플 이미지" title="웹 디자인 예시 이미지">
+        <p>사진: <a href="https://unsplash.com/ko/@charlesdeluvio">Unsplash의 charlesdeluvio</a></p>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 나의 전문적인 웹페이지. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
